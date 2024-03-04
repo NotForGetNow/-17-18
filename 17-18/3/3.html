@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Случайный цвет фона</title>
+    <style>
+        /* Стили для элемента с идентификатором color */
+        #color {
+            width: 200px;
+            height: 100px;
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Элемент с идентификатором color -->
+    <p id="color">Цвет фона</p>
+
+    <!-- JavaScript-код для изменения цвета фона -->
+    <script>
+        let colors = ["red", "blue", "green", "yellow", "purple"];
+
+        function getRandomColor() {
+            let randomIndex = Math.floor(Math.random() * colors.length);
+            return colors[randomIndex];
+        }
+
+        // Получаем элемент с идентификатором color
+        let colorElement = document.getElementById('color');
+
+        // Устанавливаем случайный цвет фона
+        colorElement.style.backgroundColor = getRandomColor();
+    </script>
+</body>
+</html>
